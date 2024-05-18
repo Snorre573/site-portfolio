@@ -1,0 +1,321 @@
+/* ESTILO GERAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2.titulo {
+    color: white;
+    font-size: 38px;
+    text-align: center;
+    font-family: Sora;
+}
+
+button:hover {
+    box-shadow: 0px 0px 8px #AC00A1;
+    transform: scale(1.05);
+}
+
+h2.titulo span {
+    background: linear-gradient(-270deg, #D1007F, #AC00A1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Sora;
+}
+
+.flex {
+    display: flex;
+}
+
+@font-face {
+    font-family: Sora;
+    src: url(../font/Sora-ExtraBold.otf);
+}
+
+@font-face {
+    font-family: SoraR;
+    src: url(../font/Sora-Regular.otf);
+}
+
+body {
+    background-color: #272727;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ESTILO CABEÇALHO */
+header {
+    padding: 40px 4%;
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #7d7d7d;
+    text-decoration: none;
+    font-family: SoraR;
+    display: inline-block;
+    transition: .2;
+}
+
+header a:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* ESTILO TOPO SITE */
+section.txt-topo-site {
+    padding: 40PX 4%;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: #D1007F;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: .2s;
+}
+
+.txt-topo-site h1 {
+    font-family: Sora;
+    font-size: 50px;
+
+    background: linear-gradient(45deg, #D1007F, #AC00A1, #AC00A1, #D1007F, #D1007F);
+    background-size: 400% 100%;
+    animation: degrade 10s linear infinite alternate;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes degrade {
+    0% {
+        background-position-x: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+.txt-topo-site p {
+    font-family: SoraR;
+    color: #FFF;
+    text-align: justify;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/* ESTILO ESPECI */
+section.especialidades {
+    padding: 40px 4%;
+}
+
+section.especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades .especialidades-box {
+    color: #FFF;
+    padding: 40px;
+    font-family: SoraR;
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff67;
+}
+
+.especialidades .especialidades-box i {
+    font-size: 70px;
+    color: #D1007F;
+}
+
+.especialidades .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ESTILO PORTFOLIO */
+section.portfolio {
+    padding: 80px 4%;
+}
+
+section.portfolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-color: #D1007F;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    border-radius: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Sora;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* ESTILO RODAPE */
+footer {
+    padding: 40px 4%;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda {
+
+    border-top: 2px solid #AC00A1;
+
+}
+
+footer .line-footer p i {
+    color: #D1007F;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: #fff;
+    text-decoration: none;
+    font-family: SoraR;
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 1020px) {
+
+    /* GERALDO */
+    .flex {
+        flex-direction: column;
+    }
+
+    h2.titulo {
+        font-size: 34px;
+        line-height: 30px;
+    }
+
+    .topo-do-site .flex {
+        flex-direction: column-reverse;
+    }
+
+    /* CABEÇALHO */
+    .menu-desktop {
+        display: none;
+    }
+
+    /* TOPO DO SITE */
+    .txt-topo-site h1 {
+        font-size: 32px;
+    }
+
+    section.topo-do-site {
+        padding: 20px 8%;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 100%;
+    }
+
+    /* ESPECIALIDADES */
+    section.especialidades {
+        padding: 40px 8%;
+    }
+
+    .btn-social {
+        text-align: center;
+    }
+
+    /* portfolio */
+    section.portfolio {
+        padding: 80px 8%;
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    section.portfolio .flex {
+        gap: 60px;
+    }
+
+}
